@@ -1,14 +1,40 @@
 [project]
 name = "voiced-analyzer"
 version = "0.1.0"
-description = "Add your description here"
+description = "The thesis deals with the analysis of voice recordings from the https://physionet.org/content/voiced/1.0.0/. The voice recordings are loaded into the Python environment. Subsequently, the signals are binary classified as healthy and pathological according to their characteristics. Predetermined rules are used for sorting. No machine learning method is used for classification. The accuracy of the classification is verified on expert annotated data."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "librosa>=0.11.0",
+    "scikit-learn>=1.7.0",
+    "seaborn>=0.13.2",
     "wfdb>=4.3.0",
 ]
 
 [dependency-groups]
 dev = [
     "ipykernel>=6.29.5",
+    "ruff>=0.12.0",
 ]
+
+[tool.ruff]
+# Enable specific rule sets
+lint.select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort (import sorting)
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+lint.ignore = ["E501"]
+
+# Exclude directories
+exclude = [".venv", "migrations"]
+
+[tool.ruff.format]
+# Use double quotes for strings
+quote-style = "double"
+# Indent with spaces
+indent-style = "space"
