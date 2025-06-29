@@ -65,7 +65,7 @@ uv pip install -e .
 
 Martin Žoha – <mates.zoha@gmail.com>
 
-Distributed under the GNU GPLv3 license. See ``LICENSE`` for more information.
+Distributed under the Unlicense license. See ``LICENSE`` for more information.
 
 [https://github.com/Zohino/](https://github.com/zohino/)
 
